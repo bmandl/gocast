@@ -31,6 +31,20 @@ module.exports = {
             {
                 test: /\.css$/i,
                 use: [MiniCssExtractPlugin.loader, 'css-loader'],
+            },
+            {
+                test: /\.(jpe?g|png|gif|svg|ico)$/i,
+                use: [{
+                    loader: 'file-loader',
+                    options: {
+                        name: '[name].[ext]',
+                        outputPath: 'images/'
+                    }
+                }]
+            },
+            {
+                test: /\.(html)$/,
+                loader: 'html-loader',                    
             }
 
         ]
@@ -53,10 +67,10 @@ module.exports = {
     ],
 
     devServer: {
-        contentBase: './dist',
+        contentBase: path.resolve(__dirname, 'dist'),
         hot: true,
         port: 3000,
-        host: '127.0.0.1',
+        host: '0.0.0.0',
         inline: true,
         disableHostCheck: true,
         watchContentBase: true,
