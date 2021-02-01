@@ -9,6 +9,7 @@ module.exports = {
     mode: 'development',
     entry: {
         index: './src/index.js',
+        about: './src/about.js',
     },
 
     output: {
@@ -64,6 +65,13 @@ module.exports = {
             chunks: ['index'],
             filename: 'index.html',
             title: 'GoCast',
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/about.html',
+            inject: true,
+            chunks: ['about'],
+            filename: 'about.html',
+            title: 'About me',
         }),
     ],
 
