@@ -2,14 +2,18 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+require('dotenv').config();
 
+const devMode = process.env.MODE != 'production';
 
 module.exports = {
     watch: true,
-    mode: 'development',
+    mode: process.env.MODE,
     entry: {
         index: './src/index.js',
         about: './src/about.js',
+        episodes: './src/episodes.js',
+        blog: './src/blog.js',
     },
 
     output: {
@@ -27,13 +31,17 @@ module.exports = {
                 use: ["babel-loader"]
             },*/
             {
+                test: /\.(sc|sa|c|le)ss$/i,
+                use: [devMode ? 'style-loader' : {loader: MiniCssExtractPlugin.loader,options:{publicPath:''}}, 'css-loader', 'sass-loader']
+            },
+            /*{
                 test: /\.scss$/,
                 use: ['style-loader','css-loader','sass-loader']
             },
             {
                 test: /\.css$/i,
                 use: [MiniCssExtractPlugin.loader, 'css-loader'],
-            },
+            },*/
             {
                 test: /\.(jpe?g|png|gif|svg|ico)$/i,
                 use: [{
@@ -72,6 +80,20 @@ module.exports = {
             chunks: ['about'],
             filename: 'about.html',
             title: 'About me',
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/episodes.html',
+            inject: true,
+            chunks: ['episodes'],
+            filename: 'episodes.html',
+            title: 'Episodes',
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/blog.html',
+            inject: true,
+            chunks: ['blog'],
+            filename: 'blog.html',
+            title: 'Blog',
         }),
     ],
 
