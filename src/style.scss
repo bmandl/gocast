@@ -225,6 +225,8 @@ html {
             border-radius: 6px;
             position: relative;
             max-width: 370px;
+            margin-right: 20px; //add negative margin right on container!
+            margin-bottom: 40px; //add negative margin bottom on container!
 
             .meta-data {
                 color: $gray2;
@@ -575,14 +577,10 @@ html {
 
             .slider {
                 display: flex;
-                justify-content: space-between;
-                & > * {
-                    &:not(:last-child) {
-                        margin-right: 30px;
-                    }
-                }
-
+                //justify-content: space-between;
                 width: 1170px;
+                margin-right: -20px;
+                margin-bottom: -40px;
             }
 
             .arrows {
@@ -606,15 +604,7 @@ html {
                 justify-content: center;
                 flex-wrap: wrap;
                 margin-bottom: -40px;
-                margin-right: -30px;
-
-                & > * {
-                    margin-right: 30px;
-                    margin-bottom: 40px;
-                    &:not(:last-child) {
-                        //margin-right: 10px;
-                    }
-                }
+                margin-right: -20px;
             }
         }
 
