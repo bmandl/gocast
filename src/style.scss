@@ -1074,6 +1074,23 @@ html {
             margin: auto;
             padding: 20px 180px 0 180px;
 
+            @media(max-width: $lg){
+                padding-left: 0;
+                padding-right: 0;
+                width: 70%;
+            }
+
+            @media(max-width: $sm){
+                width: 100%;
+                padding-left: 50px;
+                padding-right: 50px;
+            }
+
+            @media(max-width: $xs){
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+
             .meta-data {
                 color: $gray2;
                 margin-bottom: 2em;
@@ -1136,6 +1153,23 @@ html {
             padding-left: 180px;
             padding-right: 180px;
 
+            @media(max-width: $lg){
+                padding-left: 0;
+                padding-right: 0;
+                width: 70%;
+            }
+
+            @media(max-width: $sm){
+                width: 100%;
+                padding-left: 50px;
+                padding-right: 50px;
+            }
+
+            @media(max-width: $xs){
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+
             .comment {
                 margin-left: 70px;
                 margin-right: 70px;
@@ -1146,10 +1180,23 @@ html {
                 display: flex;
                 flex-wrap: wrap;
                 align-items: center;
+
+                @media(max-width:$md){
+                    margin-left: 0;
+                    margin-right: 0;
+                }
+                
+                @media(max-width:$sm){
+                    flex-direction: column;
+                    flex-wrap: nowrap;
+                }
                 &::after {
                     order: 3;
                     content: "";
                     flex-basis: 100%;
+                    @media(max-width: $sm){
+                        display: none;
+                    }
                 }
                 .profile-image {
                     order: 1;
@@ -1164,6 +1211,9 @@ html {
                         margin: 0;
                         font-size: 16px;
                         font-weight: 600;
+                        @media(max-width:$sm){
+                            margin-top: 10px;
+                        }
                     }
 
                     .text {
@@ -1178,6 +1228,14 @@ html {
                     padding: 0.6em 1em 0.6em 1em;
                     margin-left: 130px;
                     margin-top: -10px;
+                    @media(max-width:$sm){
+                        margin-left: 0;
+                        margin-top: 0;
+                        align-self: flex-start;                        
+                    }
+                    @media(max-width:$xs){
+                        width: 100%;
+                    }
                 }
 
                 .date {
@@ -1188,6 +1246,13 @@ html {
                     margin-top: -10px;
                     font-size: 14px;
                     color: $black1;
+                    @media(max-width:$sm){
+                        margin-left: 0;
+                        order: 3;
+                        margin-bottom: 20px;
+                        margin-top: 10px;
+                        align-self: flex-end;
+                    }
                 }
             }
         }
@@ -1236,6 +1301,9 @@ html {
                     outline: none;
                     padding: 1em 1.5em;
                     flex-basis: calc(50% - 10px);
+                    @media(max-width:$xs){
+                        flex-basis: 100%;
+                    }
                 }
                 input[type="checkbox"] {
                     order: 4;
@@ -1248,6 +1316,10 @@ html {
 
                 input[type="submit"] {
                     order: 6;
+                    @media(max-width:$xs){
+                        width: 80%;
+                        margin:auto;
+                    }
                 }
             }
         }
