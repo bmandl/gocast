@@ -15,6 +15,7 @@ module.exports = {
         episodes: './src/episodes.js',
         blog: './src/blog.js',
         post: './src/post.js',
+        contact: './src/contact.js'
     },
 
     output: {
@@ -102,6 +103,13 @@ module.exports = {
             chunks: ['post'],
             filename: 'post.html',
             title: 'Post',
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/contact.html',
+            inject: true,
+            chunks: ['contact'],
+            filename: 'contact.html',
+            title: 'Contact',
         }),
     ],
 
