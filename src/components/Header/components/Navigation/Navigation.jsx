@@ -1,8 +1,14 @@
 import React from "react";
 import {Logo} from '../../../Logo/Logo';
+import {Button} from '../../../Button/Button';
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {faPaypal} from '@fortawesome/free-brands-svg-icons';
+
 import "./style.scss";
 
 export const Navigation = () => {
+    const donate = <FontAwesomeIcon icon={faPaypal} key={0} />;
     return(
     <>
     <nav className="navigation">
@@ -19,8 +25,8 @@ export const Navigation = () => {
             <li className="menu-item"><a href="contact.html">Contact</a></li>
         </ul>
         <div className="cta-top">
-            <button className="btn btn-primary">Subscribe</button>
-            <button className="btn btn-secondary donate"><i className="fa fa-paypal"></i> Donate</button>
+            <Button type="primary" text="Subscribe" />
+            <Button type="secondary" text={["Donate ",donate]} />
         </div>
     </nav>
     </>
