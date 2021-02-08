@@ -1,0 +1,106 @@
+$family: "Josefin Sans", sans-serif;
+$primary: #ff5300;
+$secondary: #f5f5f5;
+$tertiary: #e5e5e5;
+$black1: #222222;
+$black2: #555555;
+$black3: #777777;
+$gray2: #c2c2c2;
+$gray3: #999999;
+$gray4: #afafaf;
+
+$xs: 575.98px;
+$sm: 767.98px;
+$md: 991.98px;
+$lg: 1199.98px;
+$xl: 1599.98px;
+
+.hero {
+    padding-top: 130px;
+    max-width: 1170px;
+    margin: auto;
+
+    @media (max-width: $lg) {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    @media (max-width: $sm) {
+        padding-top: 50px;
+    }
+
+    @media (max-width: $xs) {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    h1 {
+        font-weight: 600;
+        width: 70%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+
+        @media (max-width: $xl) {
+            width: 45%;
+        }
+        @media (max-width: $md) {
+            width: 60%;
+        }
+        @media (max-width: $sm) {
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    p {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        line-height: 1.5em;
+        width: 45%;
+
+        @media (max-width: $md) {
+            width: 60%;
+        }
+        @media (max-width: $sm) {
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    .audio-player {
+        width: 550px;
+        margin-bottom: 50px;
+        @media (max-width: $lg) {
+            width: 450px;
+        }
+        @media (max-width: $md) {
+            width: 500px;
+        }
+        @media (max-width: $sm) {
+            width: 100%;
+        }
+        @media (max-width: $xs) {
+            width: 100%;
+        }
+    }
+}
+
+.big-image {
+    position: absolute;
+    bottom: 0;
+    right: calc((40px + 100vw - 1600px) / 2);
+    width: 600px;
+    @media (max-width: $xl) {
+        right: 0;
+    }
+    @media (max-width: $lg) {
+        width: 500px;
+    }
+    @media (max-width: $md) {
+        width: 300px;
+        bottom: 200px;
+    }
+    @media (max-width: $sm) {
+        display: none;
+    }
+}

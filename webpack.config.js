@@ -11,11 +11,11 @@ module.exports = {
     mode: process.env.MODE,
     entry: {
         index: './src/index.js',
-        about: './src/about.js',
-        episodes: './src/episodes.js',
-        blog: './src/blog.js',
-        post: './src/post.js',
-        contact: './src/contact.js'
+        //about: './src/about.js',
+        //episodes: './src/episodes.js',
+        //blog: './src/blog.js',
+        //post: './src/post.js',
+        //contact: './src/contact.js'
     },
 
     output: {
@@ -27,23 +27,17 @@ module.exports = {
 
     module: {
         rules: [
-            /*{
-                test: /\.jsx?$/,
+            {
+                test: /\.(js|jsx)$/,
                 exclude: /node_modules/,
-                use: ["babel-loader"]
-            },*/
+                use: {
+                    loader: "babel-loader",
+                }
+            },
             {
                 test: /\.(sc|sa|c|le)ss$/i,
                 use: [devMode ? 'style-loader' : {loader: MiniCssExtractPlugin.loader,options:{publicPath:''}}, 'css-loader', 'sass-loader']
             },
-            /*{
-                test: /\.scss$/,
-                use: ['style-loader','css-loader','sass-loader']
-            },
-            {
-                test: /\.css$/i,
-                use: [MiniCssExtractPlugin.loader, 'css-loader'],
-            },*/
             {
                 test: /\.(jpe?g|png|gif|svg|ico)$/i,
                 use: [{
@@ -76,7 +70,7 @@ module.exports = {
             filename: 'index.html',
             title: 'GoCast',
         }),
-        new HtmlWebpackPlugin({
+        /*new HtmlWebpackPlugin({
             template: './src/about.html',
             inject: true,
             chunks: ['about'],
@@ -110,7 +104,7 @@ module.exports = {
             chunks: ['contact'],
             filename: 'contact.html',
             title: 'Contact',
-        }),
+        }),*/
     ],
 
     devServer: {
