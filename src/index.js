@@ -9,7 +9,7 @@ import "./style.scss";
 export const App = () => {
     return (
         <>
-        <Header />
+        <Header hero />
         <Episodes title="Latest Episodes" latest={true} />
         <Footer />
         </>

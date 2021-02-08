@@ -1,13 +1,16 @@
 import React from "react";
 import {Navigation} from "./components/Navigation/Navigation";
 import {Hero} from "./components/Hero/Hero";
+import {Title} from "./components/Title/Title";
+
 import "./style.scss";
 
-export const Header = () => {
+export const Header = (props) => {
     return (
-    <div className="header">
+    <div className={props.hero ? "header" : "header-page"}>
         <Navigation />
-        <Hero />
+        {props.hero && <Hero />}
+        {props.title && <Title title={props.title} />}
     </div>
     )
 }
