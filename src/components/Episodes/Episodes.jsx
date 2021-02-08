@@ -8,7 +8,7 @@ export const Episodes = (props) => {
     const [episodesData, getEpisodes] = useState([
         {
             id: 0,
-            img: "",
+            img: "/images/dog.png",
             title: "Visiting my best friend's city for first time",
             text: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam , sed diam voluptua.",
             tags: [
@@ -19,7 +19,7 @@ export const Episodes = (props) => {
         },
         {
             id: 1,
-            img: "",
+            img: "/images/book.png",
             title: "An interesting read I definitely recommend",
             text: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam , sed diam voluptua.",
             tags: [
@@ -30,7 +30,7 @@ export const Episodes = (props) => {
         },
         {
             id: 2,
-            img: "",
+            img: "/images/door.png",
             title: "What if all my adventures go back home?",
             text: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam , sed diam voluptua.",
             tags: [

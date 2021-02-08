@@ -10,7 +10,7 @@ module.exports = {
     watch: true,
     mode: process.env.MODE,
     entry: {
-        index: './src/index.js',
+        index: './src/pages/Home/index.js',
         //about: './src/about.js',
         //episodes: './src/episodes.js',
         //blog: './src/blog.js',
@@ -108,7 +108,7 @@ module.exports = {
     ],
 
     devServer: {
-        contentBase: path.resolve(__dirname, 'dist'),
+        contentBase: path.resolve(__dirname, 'public'),
         hot: true,
         port: 3000,
         host: '0.0.0.0',
