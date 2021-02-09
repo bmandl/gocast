@@ -4,11 +4,11 @@ import {Header} from "../../components/Header/Header";
 import {Footer} from "../../components/Footer/Footer";
 import {Episodes} from "../../components/Episodes/Episodes";
 
-import "./style.scss";
+import "../style.scss";
 import { Slider } from "../../components/Slider/Slider";
 import { Carousel } from "../../components/Carousel/Carousel";
 
-export const App = () => {
+export const Home = () => {
     return (
         <>
         <Header hero />
@@ -20,4 +20,4 @@ export const App = () => {
     )
 }
 
-ReactDOM.render(<App />,document.getElementById("body"));
+ReactDOM.render (<Home />, document.getElementById("body"));

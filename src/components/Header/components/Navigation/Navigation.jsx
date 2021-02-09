@@ -10,7 +10,6 @@ import "./style.scss";
 export const Navigation = () => {
     const donate = <FontAwesomeIcon icon={faPaypal} key={0} />;
     return(
-    <>
     <nav className="navigation">
         <Logo />
         <div className="menu-mobile">
@@ -29,6 +28,5 @@ export const Navigation = () => {
             <Button type="secondary" text={["Donate ",donate]} />
         </div>
     </nav>
-    </>
     )
 }
