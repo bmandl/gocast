@@ -1,6 +1,6 @@
 import React from "react";
 
-import "./style.scss";
+import "./_button.scss";
 
 export const Button = (props) => {
     return (

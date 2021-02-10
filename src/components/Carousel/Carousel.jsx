@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import "./style.scss";
+import "./_carousel.scss";
 
 export const Carousel = () => {
     const [feeds, getFeeds] = useState([

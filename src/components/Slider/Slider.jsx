@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
 import { Card } from "../Card/Card";
 
-import "./style.scss";
+import "./_slider.scss";
 
 export const Slider = (props) => {
     const [cardData, getData] = useState([

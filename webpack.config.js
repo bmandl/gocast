@@ -10,7 +10,12 @@ module.exports = {
     watch: true,
     mode: process.env.MODE,
     entry: {
-        index: './src/index.js',
+        index: './src/pages/Home/Home.js',
+        //about: './src/pages/About/About.js',
+        //episodes: './src/pages/Episodes/EpisodesPage.js',
+        //blog: './src/pages/Blog/Blog.js',
+        //post: './src/pages/Posts/Post.js',
+        //contact: './src/pages/Contact/Contact.js'
         //index: './src/pages/Home/Home.js',
         //about: './src/pages/About/About.js',
         //episodes: './src/episodes.js',
@@ -65,42 +70,42 @@ module.exports = {
         new MiniCssExtractPlugin(),
         new CleanWebpackPlugin({ cleanStaleWebpackAssets: false }),
         new HtmlWebpackPlugin({
-            template: './src/index.html',
+            template: './src/pages/Home/index.html',
             inject: true,
             chunks: ['index'],
             filename: 'index.html',
             title: 'GoCast',
         }),/*
         new HtmlWebpackPlugin({
-            template: './src/index.html',
+            template: './src/pages/About/about.html',
             inject: true,
             chunks: ['about'],
             filename: 'about.html',
             title: 'About me',
-        }),/*
+        }),
         new HtmlWebpackPlugin({
-            template: './src/episodes.html',
+            template: './src/pages/Episodes/episodes.html',
             inject: true,
             chunks: ['episodes'],
             filename: 'episodes.html',
             title: 'Episodes',
         }),
         new HtmlWebpackPlugin({
-            template: './src/blog.html',
+            template: './src/pages/Blog/blog.html',
             inject: true,
             chunks: ['blog'],
             filename: 'blog.html',
             title: 'Blog',
         }),
         new HtmlWebpackPlugin({
-            template: './src/post.html',
+            template: './src/pages/Posts/post.html',
             inject: true,
             chunks: ['post'],
             filename: 'post.html',
             title: 'Post',
         }),
         new HtmlWebpackPlugin({
-            template: './src/contact.html',
+            template: './src/pages/Contact/contact.html',
             inject: true,
             chunks: ['contact'],
             filename: 'contact.html',

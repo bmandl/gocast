@@ -6,11 +6,11 @@ import {
     Switch,
     Route,
 } from "react-router-dom";
-import { Footer } from "./components/Footer/Footer";
-import { Header } from "./components/Header/Header";
-import {About} from "./pages/About/About";
-import {EpisodesPage } from "./pages/Episodes/EpisodesPage";
-import {Home} from "./pages/Home/Home";
+import { Footer } from "../../components/Footer/Footer";
+import { Header } from "../../components/Header/Header";
+import {About} from "../About/About";
+import {EpisodesPage } from "../Episodes/EpisodesPage";
+import {Home} from "./Home";
 
 export const App = () => {
     return (
