@@ -6,6 +6,8 @@ import apple from "./img/apple-podcasts.png";
 import spotify from "./img/spotify.png";
 
 import "./style.scss";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFacebook, faInstagram, faLinkedinIn, faSkype } from "@fortawesome/free-brands-svg-icons";
 
 export const Footer = () => {
     return (
@@ -18,10 +20,10 @@ export const Footer = () => {
                 elitr, sed diam nonumy eirmod tempor invidunt.</p>
             Socials
             <div className="socials">
-                            <a href="#"><i className="fa fa-facebook"></i></a>
-                            <a href="#"><i className="fa fa-linkedin"></i></a>
-                            <a href="#"><i className="fa fa-instagram"></i></a>
-                            <a href="#"><i className="fa fa-skype"></i></a>
+                            <a href="#"><FontAwesomeIcon icon={faFacebook} /></a>
+                            <a href="#"><FontAwesomeIcon icon={faLinkedinIn} /></a>
+                            <a href="#"><FontAwesomeIcon icon={faInstagram} /></a>
+                            <a href="#"><FontAwesomeIcon icon={faSkype} /></a>
                         </div>
                     </div>
                     <div id="pages" className="footer-column">

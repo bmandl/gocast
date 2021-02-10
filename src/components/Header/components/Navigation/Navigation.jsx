@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faPaypal} from '@fortawesome/free-brands-svg-icons';
 
 import "./style.scss";
+import { Link } from "react-router-dom";
 
 export const Navigation = () => {
     const donate = <FontAwesomeIcon icon={faPaypal} key={0} />;
@@ -16,9 +17,9 @@ export const Navigation = () => {
             <i className="fa fa-bars"></i>
         </div>
         <ul className="menu">
-            <li className="menu-item"><a href="index.html">Home</a></li>
-            <li className="menu-item"><a href="about.html">About</a></li>
-            <li className="menu-item"><a href="episodes.html">Episode</a></li>
+            <li className="menu-item"><Link to="/">Home</Link></li>
+            <li className="menu-item"><Link to="/about">About</Link></li>
+            <li className="menu-item"><Link to="/episodes">Episodes</Link></li>
             <li className="menu-item"><a href="blog.html">Blog</a></li>
             <li className="menu-item"><a href="#">Pages</a></li>
             <li className="menu-item"><a href="contact.html">Contact</a></li>

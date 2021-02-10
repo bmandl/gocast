@@ -7,10 +7,10 @@ import "./style.scss";
 
 export const Header = (props) => {
     return (
-    <div className={props.hero ? "header" : "header-page"}>
+    <section className={props.hero ? "header" : "header-page"}>
         <Navigation />
         {props.hero && <Hero />}
         {props.title && <Title title={props.title} />}
-    </div>
+    </section>
     )
 }
