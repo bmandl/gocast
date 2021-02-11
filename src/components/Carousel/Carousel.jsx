@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import "./_carousel.scss";
 
-export const Carousel = () => {
+export const Carousel = (props) => {
     const [feeds, getFeeds] = useState([
         "/images/75095@2x.png",
         "/images/mike-dorner-sf_1ZDA1YFw-unsplash@2x.png",
@@ -17,8 +17,8 @@ export const Carousel = () => {
     ]);
 
     return (
-        <section className="carousel-container">
-            <h2>Instagram feeds</h2>
+        <div className="carousel-container">
+            <h2>{props.title}</h2>
             <div className="feeds-box">
                 {
                     feeds.map((feed, index) =>
@@ -27,6 +27,6 @@ export const Carousel = () => {
                         </div>)
                 }
             </div>
-        </section>
+        </div>
     )
 }

@@ -1,3 +1,5 @@
+@use '../../styles/base' as *;
+
 .carousel-container {
     max-width: calc(1024px + 2 * 70px);
     margin: auto;

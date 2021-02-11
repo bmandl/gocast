@@ -1,5 +1,8 @@
 @use '../../styles/base' as *;
 @use '../../styles/header';
+@use '../../styles/footer';
+@use '../../styles/subscribe';
+@use '../../styles/logo';
 
 .subscribe {
     max-width: calc(1024px + 2 * 70px);

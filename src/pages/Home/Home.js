@@ -1,12 +1,17 @@
 import React from "react";
+import ReactDOM from "react-dom";
 
 import "./_home.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPaypal } from "@fortawesome/free-brands-svg-icons";
 import { AudioPlayer } from "../../components/AudioPlayer/AudioPlayer";
-import {Logo} from "../../components/Logo/Logo";
+import {Button} from "../../components/Button/Button";
+import { Episodes } from "../../components/Episodes/Episodes";
+import { Slider } from "../../components/Slider/Slider";
+import { Carousel } from "../../components/Carousel/Carousel";
+import { Subscribe } from "../../components/Subscribe/Subscribe";
 
-/*export const Home = () => {
+/*export const Home = () => {*/
     const episodes = [
         {
             id: 0,
@@ -42,7 +47,7 @@ import {Logo} from "../../components/Logo/Logo";
             ]
         }
     ]
-
+/*
     return (
         <>
             <Episodes title="Latest Episodes" latest={true} episodes={episodes} />
@@ -53,7 +58,10 @@ import {Logo} from "../../components/Logo/Logo";
     )
 }*/
 
-ReactDOM.render(<Logo />,document.getElementsByClassName("logo"));
-ReactDOM.render(<Button type="primary" text="Subscribe" />,document.getElementsByClassName("cta-top"));
-ReactDOM.render(<Button type="secondary" text={["Donate",<FontAwesomeIcon icon={faPaypal} />]} />,document.getElementsByClassName("cta-top"));
-ReactDOM.render(<AudioPlayer />,document.getElementsByClassName("audio-player"));
+//ReactDOM.render(<Logo />,document.getElementById("logo"));
+ReactDOM.render([<Button type="primary" text="Subscribe" />,<Button type="secondary" text={["Donate",<FontAwesomeIcon icon={faPaypal} />]} />],document.getElementById("cta-top"));
+ReactDOM.render(<AudioPlayer />,document.getElementById("audio-player"));
+ReactDOM.render(<Episodes latest episodes={episodes} title="Latest Episodes" />,document.getElementById("latest"));
+ReactDOM.render(<Slider title="Blog Posts" />, document.getElementById("slider"));
+ReactDOM.render(<Carousel title="Instagram Feeds" />, document.getElementById("carousel"));
+ReactDOM.render(<Subscribe />,document.getElementById("subscribe"));
