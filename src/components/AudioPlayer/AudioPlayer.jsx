@@ -2,7 +2,7 @@ import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faPlayCircle,faVolumeUp,faDownload} from '@fortawesome/free-solid-svg-icons';
 
-import "./_audio-player.scss";
+import "./audio-player.scss";
 
 export const AudioPlayer = () => {
     return (

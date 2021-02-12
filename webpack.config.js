@@ -11,8 +11,8 @@ module.exports = {
     mode: process.env.MODE,
     entry: {
         index: './src/pages/Home/Home.js',
-        //about: './src/pages/About/About.js',
-        //episodes: './src/pages/Episodes/EpisodesPage.js',
+        about: './src/pages/About/About.js',
+        episodes: './src/pages/Episodes/EpisodesPage.js',
         //blog: './src/pages/Blog/Blog.js',
         //post: './src/pages/Posts/Post.js',
         //contact: './src/pages/Contact/Contact.js'
@@ -75,7 +75,7 @@ module.exports = {
             chunks: ['index'],
             filename: 'index.html',
             title: 'GoCast',
-        }),/*
+        }),
         new HtmlWebpackPlugin({
             template: './src/pages/About/about.html',
             inject: true,
@@ -89,7 +89,7 @@ module.exports = {
             chunks: ['episodes'],
             filename: 'episodes.html',
             title: 'Episodes',
-        }),
+        }),/*
         new HtmlWebpackPlugin({
             template: './src/pages/Blog/blog.html',
             inject: true,

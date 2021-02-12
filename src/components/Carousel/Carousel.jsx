@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import "./_carousel.scss";
+import "./carousel.scss";
 
 export const Carousel = (props) => {
     const [feeds, getFeeds] = useState([
@@ -22,7 +22,7 @@ export const Carousel = (props) => {
             <div className="feeds-box">
                 {
                     feeds.map((feed, index) =>
-                        <div className="feed"><img src={feed} />
+                        <div className="feed" key={index}><img src={feed} />
                             <div className="overlay"><a href=""></a></div>
                         </div>)
                 }

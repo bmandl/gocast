@@ -18,117 +18,33 @@
     @media (max-width: $sm) {
         height: auto;
         padding-bottom: 50px;
-    }    
-
-    .navigation {
-        max-width: 1170px;
-        margin: auto;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: flex-start;
-    
-        @media (max-width: $lg) {
-            padding-left: 50px;
-            padding-right: 50px;
-        }
-    
-        @media (max-width: $xs) {
-            padding-left: 10px;
-            padding-right: 10px;
-        }
-    
-        .menu-mobile {
-            display: none;
-    
-            @media (max-width: $md) {
-                display: block;
-                margin-right: 60px;
-                font-size: 2em;
-            }
-        }
-    
-        .menu {
-            flex: 1;
-            display: flex;
-            justify-content: space-between;
-            font-weight: 400;
-            text-decoration: none;
-            list-style-type: none;
-            padding: 0;
-    
-            @media (max-width: $lg) {
-                flex: 2;
-            }
-    
-            @media (max-width: $md) {
-                display: none;
-            }
-    
-            .menu-item a {
-                margin-right: 36px;
-                padding-bottom: 0.5em;
-                text-decoration: none;
-                color: $black1;
-                transition: all 0.125s ease;
-                &:hover {
-                    color: $primary;
-                    border-bottom: 1px solid $primary;
-                }
-            }
-        }
-    
-        .cta-top {
-            flex: 1;
-            display: flex;
-            justify-content: flex-end;
-            @media (max-width: $md) {
-                order: 3;
-            }
-            @media (max-width: $sm) {
-                display: none;
-            }
-            .btn {
-                margin-right: 30px;
-                @media (max-width: $lg) {
-                    padding-left: 0.5em;
-                    padding-right: 0.5em;
-                    flex: 2;
-                }
-    
-                &.donate {
-                    font-weight: 600;
-                    margin: 0;
-                }
-            }
-        }
     }
-    
+
     .hero {
         padding-top: 130px;
         max-width: 1170px;
         margin: auto;
-    
+
         @media (max-width: $lg) {
             padding-left: 50px;
             padding-right: 50px;
         }
-    
+
         @media (max-width: $sm) {
             padding-top: 50px;
         }
-    
+
         @media (max-width: $xs) {
             padding-left: 10px;
             padding-right: 10px;
         }
-    
+
         h1 {
             font-weight: 600;
             width: 70%;
             margin-top: 20px;
             margin-bottom: 20px;
-    
+
             @media (max-width: $xl) {
                 width: 45%;
             }
@@ -140,13 +56,13 @@
                 text-align: center;
             }
         }
-    
+
         p {
             margin-top: 30px;
             margin-bottom: 30px;
             line-height: 1.5em;
             width: 45%;
-    
+
             @media (max-width: $md) {
                 width: 60%;
             }
@@ -155,7 +71,7 @@
                 text-align: center;
             }
         }
-    
+
         .audio-player {
             width: 550px;
             margin-bottom: 50px;
@@ -173,7 +89,7 @@
             }
         }
     }
-    
+
     .big-image {
         position: absolute;
         bottom: 0;
@@ -193,9 +109,90 @@
             display: none;
         }
     }
-    
-    
-    
+}
+
+.navigation {
+    max-width: 1170px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+
+    @media (max-width: $lg) {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    @media (max-width: $xs) {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .menu-mobile {
+        display: none;
+
+        @media (max-width: $md) {
+            display: block;
+            margin-right: 60px;
+            font-size: 2em;
+        }
+    }
+
+    .menu {
+        flex: 1;
+        display: flex;
+        justify-content: space-between;
+        font-weight: 400;
+        text-decoration: none;
+        list-style-type: none;
+        padding: 0;
+
+        @media (max-width: $lg) {
+            flex: 2;
+        }
+
+        @media (max-width: $md) {
+            display: none;
+        }
+
+        .menu-item a {
+            margin-right: 36px;
+            padding-bottom: 0.5em;
+            text-decoration: none;
+            color: $black1;
+            transition: all 0.125s ease;
+            &:hover {
+                color: $primary;
+                border-bottom: 1px solid $primary;
+            }
+        }
+    }
+
+    .cta-top {
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+        @media (max-width: $md) {
+            order: 3;
+        }
+        @media (max-width: $sm) {
+            display: none;
+        }
+        .btn {
+            margin-right: 30px;
+            @media (max-width: $lg) {
+                padding-left: 0.5em;
+                padding-right: 0.5em;
+                flex: 2;
+            }
+
+            &.donate {
+                font-weight: 600;
+                margin: 0;
+            }
+        }
+    }
 }
 
 .header-page {
@@ -212,7 +209,7 @@
         text-align: center;
         margin-top: 100px;
     }
-    
+
     .crumbread {
         text-align: center;
         a {

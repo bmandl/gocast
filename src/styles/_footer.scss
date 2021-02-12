@@ -52,19 +52,25 @@
                 }
                 a {
                     text-decoration: none;
-                    color: $primary;
-                    font-size: 1em;
-                    .fa {
+                    //font-size: 1em;
+                    .fab {
                         margin: 20px 20px 20px 0;
-                        //width: 16px;
-                        //height: 16px;
+                        width: 16px;
+                        height: 16px;
+                        color: $primary;
                         border: 1px solid $primary;
                         border-radius: 100%;
-                        padding: 1em;
+                        font-size: 1em;
+                        padding: 1.5em;
                         transition: 0.3s ease;
-
-                        &.fa-facebook::before {
-                            margin-left: 0.14em;
+                        position: relative;
+                        &::before{
+                            position: absolute;
+                            top: calc(50% - 0.5em);
+                            left: 1.1em;
+                        }
+                        &.fa-facebook-f::before {
+                            left: 1.2em;
                         }
 
                         &:hover {
