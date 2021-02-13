@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
 import { Card } from "../Card/Card";
 
-import "./style.scss";
+import "./slider.scss";
 
 export const Slider = (props) => {
     const [cardData, getData] = useState([
@@ -42,7 +42,7 @@ export const Slider = (props) => {
     const cards = cardData.map((card, index) => <Card data={card} key={index} />);
 
     return (
-        <section className="slider-container">
+        <div className="slider-container">
             <h2>{props.title}</h2>
             <div className="slider">
                 {cards}
@@ -51,6 +51,6 @@ export const Slider = (props) => {
                 <a href=""><FontAwesomeIcon icon={faArrowLeft} /></a>
                 <a href=""><FontAwesomeIcon icon={faArrowRight} /></a>
             </div>
-        </section>
+        </div>
     )
 }

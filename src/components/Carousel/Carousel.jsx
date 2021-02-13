@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 
-import "./style.scss";
+import "./carousel.scss";
 
-export const Carousel = () => {
+export const Carousel = (props) => {
     const [feeds, getFeeds] = useState([
         "/images/75095@2x.png",
         "/images/mike-dorner-sf_1ZDA1YFw-unsplash@2x.png",
@@ -17,16 +17,16 @@ export const Carousel = () => {
     ]);
 
     return (
-        <section className="carousel-container">
-            <h2>Instagram feeds</h2>
+        <div className="carousel-container">
+            <h2>{props.title}</h2>
             <div className="feeds-box">
                 {
                     feeds.map((feed, index) =>
-                        <div className="feed"><img src={feed} />
+                        <div className="feed" key={index}><img src={feed} />
                             <div className="overlay"><a href=""></a></div>
                         </div>)
                 }
             </div>
-        </section>
+        </div>
     )
 }

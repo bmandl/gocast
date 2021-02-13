@@ -1,0 +1,29 @@
+@use '../../styles/base' as *;
+
+.header {
+    position: relative;
+    background: linear-gradient(to bottom left, #fbfbfb, #fcfcfc, #fcfcfc, #f6f7f9, #f6f6f6, #f6f7f8, #f6f6f7);
+    height: 830px;
+    width: 100vw;
+
+    @media (max-width: $lg) {
+        height: 800px;
+    }
+
+    @media (max-width: $md) {
+        height: 800px;
+    }
+
+    @media (max-width: $sm) {
+        height: auto;
+        padding-bottom: 50px;
+    }    
+}
+
+.header-page {
+    position: relative;
+    //background: linear-gradient(to bottom left, #fbfbfb, #fcfcfc, #fcfcfc, #f6f7f9, #f6f6f6, #f6f7f8, #f6f6f7);
+    height: 450px;
+    width: 100vw;
+    background: #f9f9f9 url("./img/bgpattern.svg") repeat;
+}

@@ -1,0 +1,35 @@
+@use '../../styles/base' as *;
+
+.btn {
+    display: inline-block;
+    color: $black1;
+    border-radius: 3px;
+    padding: 12px 30px;
+    border: 1px solid $primary;
+    font-family: $family;
+    font-size: 14px;
+    outline: none;
+    transition: all 0.125s ease;
+    cursor: pointer;
+
+    &.btn-primary {
+        font-weight: 400;
+        color: white;
+        background: $primary;
+
+        &:hover {
+            background: darken($primary, 5%);
+        }
+    }
+
+    &.btn-secondary {
+        font-weight: 600;
+        color: $primary;
+        background: none;
+
+        &:hover {
+            color: white;
+            background: $primary;
+        }
+    }
+}

@@ -1,5 +1,5 @@
 import React from "react";
-import "./style.scss";
+import "./hero.scss";
 import hero from "./img/header-img.png";
 import { AudioPlayer } from "../../../AudioPlayer/AudioPlayer";
 

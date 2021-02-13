@@ -1,7 +1,7 @@
 import React from "react";
 import { Button } from "../Button/Button";
 
-import "./style.scss";
+import "./card.scss";
 
 export const Card = (props) => {
     return (
@@ -13,7 +13,7 @@ export const Card = (props) => {
             </div>
             <h3>{props.data.title}</h3>
             <p>{props.data.text}</p>
-            <div className="read-more"><Button type="secondary" text="Read more" /></div>
+            <div className="read-more"><Button style="secondary" text="Read more" /></div>
         </div>
     )
 }

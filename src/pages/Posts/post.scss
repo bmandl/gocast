@@ -1,0 +1,103 @@
+@use "../../styles/base" as *;
+
+.post-content {
+    max-width: 1170px;
+    margin: auto;
+    padding: 20px 180px 0 180px;
+
+    @media(max-width: $lg){
+        padding-left: 0;
+        padding-right: 0;
+        width: 70%;
+    }
+
+    @media(max-width: $sm){
+        width: 100%;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    @media(max-width: $xs){
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .meta-data {
+        color: $gray2;
+        margin-bottom: 2em;
+        .author {
+            font-size: 16px;
+            font-weight: 400;
+            color: $primary;
+            &::before {
+                content: "By ";
+            }
+        }
+        .date,
+        .location {
+            font-size: 14px;
+            margin-right: 10px;
+        }
+    }
+
+    .post-text {
+        line-height: 1.5;
+        p {
+            color: $black2;
+        }
+    }
+
+    .quote {
+        padding: 1.5em;
+        margin-top: 2em;
+        margin-bottom: 2em;
+        font-size: 22px;
+        font-style: italic;
+        color: $black1;
+        border-left: 1px solid $tertiary;
+    }
+
+    .orange-bullet {
+        padding-left: 20px;
+        margin: 0;
+        li {
+            position: relative;
+            list-style: none;
+            color: $black3;
+            margin-bottom: 1em;
+            &::before {
+                position: absolute;
+                content: "\2022";
+                color: $primary;
+                font-size: 3em;
+                top: -0.45em;
+                left: -0.6em;
+            }
+        }
+    }
+}
+
+.comments {
+    max-width: 1170px;
+    margin: auto;
+    margin-top: 40px;
+    padding-left: 180px;
+    padding-right: 180px;
+
+    @media(max-width: $lg){
+        padding-left: 0;
+        padding-right: 0;
+        width: 70%;
+    }
+
+    @media(max-width: $sm){
+        width: 100%;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    @media(max-width: $xs){
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}

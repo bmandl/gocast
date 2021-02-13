@@ -1,0 +1,9 @@
+@use "../../styles/base" as *;
+
+.card-grid {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -20px;
+    margin-bottom: -40px;
+    justify-content: center;
+}

@@ -5,7 +5,7 @@ import {Button} from '../../../Button/Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faPaypal} from '@fortawesome/free-brands-svg-icons';
 
-import "./style.scss";
+import "./navigation.scss";
 import { Link } from "react-router-dom";
 
 export const Navigation = () => {
@@ -20,13 +20,13 @@ export const Navigation = () => {
             <li className="menu-item"><Link to="/">Home</Link></li>
             <li className="menu-item"><Link to="/about">About</Link></li>
             <li className="menu-item"><Link to="/episodes">Episodes</Link></li>
-            <li className="menu-item"><a href="blog.html">Blog</a></li>
-            <li className="menu-item"><a href="#">Pages</a></li>
-            <li className="menu-item"><a href="contact.html">Contact</a></li>
+            <li className="menu-item"><Link to="/blog">Blog</Link></li>
+            <li className="menu-item"><Link to="/post">Pages</Link></li>
+            <li className="menu-item"><Link to="/contact">Contact</Link></li>
         </ul>
         <div className="cta-top">
-            <Button type="primary" text="Subscribe" />
-            <Button type="secondary" text={["Donate ",donate]} />
+            <Button style="primary" text="Subscribe" />
+            <Button style="secondary" text={["Donate ",donate]} />
         </div>
     </nav>
     )

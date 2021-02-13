@@ -1,9 +1,9 @@
 import React from "react";
 
-import "./style.scss";
+import "./button.scss";
 
 export const Button = (props) => {
     return (
-        <button className={`btn btn-${props.type}`}>{props.text}</button>
+        <button type={props.type} className={`btn btn-${props.style} ${props.customClass}`}>{props.text}</button>
     )
 }

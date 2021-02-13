@@ -1,13 +1,13 @@
 import React from "react";
-import {Logo} from "../Logo/Logo";
+import { Logo } from "../Logo/Logo";
 
 import google from "./img/google-podcasts.png";
 import apple from "./img/apple-podcasts.png";
 import spotify from "./img/spotify.png";
 
-import "./style.scss";
+import "./footer.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFacebook, faInstagram, faLinkedinIn, faSkype } from "@fortawesome/free-brands-svg-icons";
+import { faFacebook, faFacebookF, faInstagram, faLinkedinIn, faSkype } from "@fortawesome/free-brands-svg-icons";
 
 export const Footer = () => {
     return (
@@ -20,10 +20,10 @@ export const Footer = () => {
                 elitr, sed diam nonumy eirmod tempor invidunt.</p>
             Socials
             <div className="socials">
-                            <a href="#"><FontAwesomeIcon icon={faFacebook} /></a>
-                            <a href="#"><FontAwesomeIcon icon={faLinkedinIn} /></a>
-                            <a href="#"><FontAwesomeIcon icon={faInstagram} /></a>
-                            <a href="#"><FontAwesomeIcon icon={faSkype} /></a>
+                            <a href="#"><FontAwesomeIcon icon={faFacebookF} className="fa" /></a>
+                            <a href="#"><FontAwesomeIcon icon={faLinkedinIn} className="fa" /></a>
+                            <a href="#"><FontAwesomeIcon icon={faInstagram} className="fa" /></a>
+                            <a href="#"><FontAwesomeIcon icon={faSkype} className="fa" /></a>
                         </div>
                     </div>
                     <div id="pages" className="footer-column">

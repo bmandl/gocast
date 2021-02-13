@@ -4,7 +4,7 @@ import React from "react";
 import { Slider } from "../../components/Slider/Slider";
 import { Subscribe } from "../../components/Subscribe/Subscribe";
 
-import './style.scss';
+import './about.scss';
 
 export const About = () => {
     return (
@@ -54,7 +54,7 @@ export const About = () => {
                 </div>
             </section>
             <Slider title="Blog Posts" />
-            <Subscribe />
+            <Subscribe title="New Episode Every Week!" subtitle="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed." />
         </>
     )
 }

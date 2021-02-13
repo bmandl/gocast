@@ -1,0 +1,76 @@
+@use '../../styles/base' as *;
+
+.subscribe {
+    min-width: 570px;
+    max-width: 25%;
+    margin: auto;
+    margin-top: 100px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @media (max-width: $sm) {
+        min-width: initial;
+        max-width: initial;
+    }
+
+    h2 {
+        text-decoration: underline;
+        margin: 0;
+    }
+
+    p {
+        margin: 0;
+        font-size: 15px;
+        font-weight: 400;
+        color: $black3;
+        padding: 40px;
+        line-height: 1.5;
+    }
+    .cta-subscribe {
+        @media (max-width: $sm) {
+            margin: auto;
+            width: 80%;
+            align-self: center;
+        }
+    
+        @media (max-width: $xs) {
+            width: calc(100% - 10px);
+            align-self: center;
+            margin: auto;
+        }
+    
+        form {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+    
+            @media (max-width: $sm) {
+                flex-direction: column;
+            }
+            input {
+                flex: 3;
+                font-family: $family;
+                color: $gray2;
+                font-size: 14px;
+                font-weight: 400;
+                padding: 1.6em 2.2em;
+                background: $secondary;
+                border: none;
+                outline: none;
+                border-radius: 4px 0 0 4px;
+            }
+    
+            button[type="submit"] {
+                flex: 1;
+                padding: 1.6em 2.2em;
+                border-radius: 0 4px 4px 0;
+                @media (max-width: $sm) {
+                    border-radius: 4px;
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+}

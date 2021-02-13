@@ -1,0 +1,52 @@
+@use '../../styles/base' as *;
+
+.post-card {
+    line-height: 1.5;
+    padding: 40px 30px;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    box-shadow: rgba($color: #3e3e3e, $alpha: 0.08) 0 20px 60px;
+    border-radius: 6px;
+    position: relative;
+    max-width: 370px;
+    margin-right: 20px; //add negative margin right on container!
+    margin-bottom: 40px; //add negative margin bottom on container!
+
+    .meta-data {
+        color: $gray2;
+        font-size: 14px;
+        line-height: 1.5;
+        .author {
+            font-size: 16px;
+            color: $primary;
+            margin-right: 1em;
+            &::before {
+                content: "By ";
+            }
+        }
+
+        .location {
+            &::before {
+                content: "\A";
+                white-space: pre;
+            }
+        }
+
+        &::before {
+            position: absolute;
+            left: 0;
+            content: "";
+            border: 1.5px solid $primary;
+            height: 2.5em;
+            background: $primary;
+            border-radius: 0 1px 1px 0;
+        }
+    }
+
+    p {
+        font-size: 15px;
+        font-weight: 400;
+        color: $black3;
+    }
+}

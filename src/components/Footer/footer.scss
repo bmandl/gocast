@@ -1,0 +1,138 @@
+@use '../../styles/base' as *;
+
+.footer {
+    max-width: 1170px;
+    margin: auto;
+    margin-top: 100px;
+    @media (max-width: $lg) {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    .footer-top {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-evenly;
+        @media (max-width: $xs) {
+            flex-direction: column;
+            align-items: stretch;
+        }
+        .branding {
+            display: flex;
+            flex: 2;
+            flex-direction: column;
+            justify-content: space-between;
+            .logo {
+                h1 {
+                    font-size: 36px;
+                    margin: 0;
+                }
+                margin-bottom: 20px;
+
+                @media (max-width: $md) {
+                    order: 0;
+                    flex: 0;
+                }
+                @media (max-width: $sm) {
+                    justify-content: initial;
+                }
+            }
+
+            p {
+                padding-right: 120px;
+                font-size: 14px;
+                color: $gray3;
+                line-height: 1.5;
+                margin-bottom: 20px;
+            }
+            .socials {
+                @media (max-width: $xs) {
+                    align-self: center;
+                    width: 100%;
+                    text-align: center;
+                }
+                a {
+                    text-decoration: none;
+                    color: $primary;
+                    .fa {
+                        //font-size: 1.5em;
+                        margin: 20px 20px 20px 0;
+                        transition: 0.3s ease;
+                        //border: 1px solid $primary;
+                        //padding: 1.5em;
+                        /*width: 16px;
+                        height: 16px;
+                        color: $primary;
+                        
+                        font-size: 1em;
+                        padding: 1.5em;
+                        position: relative;
+                        &::before{
+                            position: absolute;
+                            top: calc(50% - 0.5em);
+                            left: 1.1em;
+                        }
+                        &.fa-facebook-f::before {
+                            left: 1.2em;
+                        }*/
+
+                        &:hover {
+                            background: $primary;
+                            color: white;
+                        }
+                    }
+                }
+            }
+        }
+
+        .footer-column {
+            flex: 1;
+            &#pages,
+            &#episodes {
+                @media (max-width: $md) {
+                    display: none;
+                }
+            }
+            @media (max-width: $xs) {
+                margin-top: 40px;
+                text-align: center;
+                width: 100%;
+            }
+            ul {
+                list-style: none;
+                padding: 0;
+                li {
+                    a {
+                        text-decoration: none;
+                        line-height: 2.5;
+                        color: $gray3;
+                        @media (max-width: $xs) {
+                            width: 100%;
+                        }
+                    }
+                    img {
+                        max-width: 180px;
+                        height: 43px;
+                        object-fit: contain;
+                        @media (max-width: $xs) {
+                            max-width: 80%;
+                            height: auto;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .footer-botom {
+        margin: auto;
+        margin-top: 100px;
+        padding: 50px;
+        border-top: 1px solid $tertiary;
+        text-align: center;
+        color: $gray3;
+        font-size: 14px;
+        @media (max-width: $md) {
+            margin-top: 40px;
+        }
+    }
+}

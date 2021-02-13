@@ -1,0 +1,36 @@
+@use "../../styles/base" as *;
+
+.contact-container {
+    background: white;
+    max-width: 870px;
+    margin: auto;
+    margin-top: -60px;
+    position: relative;
+    padding: 50px 100px;
+    border-radius: 8px;
+    box-shadow: rgba($color: #3e3e3e, $alpha: 0.08) 0 20px 60px;
+
+    @media (max-width: $lg) {
+        width: 70%;
+    }
+
+    @media (max-width: $md) {
+        width: calc(100% - 100px);
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    @media (max-width: $sm) {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    @media (max-width: $xs) {
+        width: calc(100% - 20px);
+    }
+
+    h2 {
+        text-align: center;
+        margin: 0;
+    }
+}

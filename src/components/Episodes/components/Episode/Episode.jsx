@@ -1,7 +1,7 @@
 import React from "react";
 import {AudioPlayer} from "../../../AudioPlayer/AudioPlayer";
 
-import "./style.scss";
+import "./_episode.scss";
 
 export const Episode = (props) => {
     return (

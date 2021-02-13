@@ -1,0 +1,78 @@
+// _base.scss
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600;700&display=swap");
+
+
+$family: "Josefin Sans", sans-serif;
+$primary: #ff5300;
+$secondary: #f5f5f5;
+$tertiary: #e5e5e5;
+$black1: #222222;
+$black2: #555555;
+$black3: #777777;
+$gray2: #c2c2c2;
+$gray3: #999999;
+$gray4: #afafaf;
+
+$xs: 575.98px;
+$sm: 767.98px;
+$md: 991.98px;
+$lg: 1199.98px;
+$xl: 1599.98px;
+
+body {
+    overflow-x: hidden;
+    * {
+        box-sizing: border-box;
+    }
+    input,
+    select,
+    textarea {
+        font-family: "Josefin Sans";
+        color: $gray4;
+        border-radius: 4px;
+
+        option {
+            outline: none;
+            background: none;
+        }
+    }
+
+    margin: 0;
+    color: $black1;
+    font-family: $family;
+    p {
+        font-size: 15px;
+        color: $black3;
+        font-weight: 400;
+        line-height: 1.5;
+    }
+
+    .orange-text {
+        display: inline-block;
+        border-bottom: 1px solid $primary;
+        line-height: 0.1em;
+        font-size: 14px;
+        color: $primary;
+        text-align: right;
+        padding-left: 2em;
+
+        span {
+            padding-left: 0.5em;
+            background: white;
+        }
+    }
+
+    h1 {
+        font-size: 52px;
+    }
+
+    h2 {
+        font-size: 32px;
+        font-weight: 600;
+    }
+
+    h3 {
+        font-size: 24px;
+        font-weight: 600;
+    }
+}

@@ -1,0 +1,14 @@
+@use "../../styles/base" as *;
+
+.blog-posts {
+    width: 100%;
+    position: relative;
+    padding-top: 90px;
+    text-align: center;
+
+    .grid-container {
+        max-width: 1170px;
+        margin: auto;
+        text-align: initial;
+    }
+}
