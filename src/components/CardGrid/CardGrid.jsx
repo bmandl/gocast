@@ -7,7 +7,7 @@ export const CardGrid = (props) => {
     const [data,getData] = useState([]);
 
     useEffect(() => {
-        getPosts(props.data);
+        getData(props.data);
     },[]);
 
     const cards = data.map((card, index) => <Card data={card} key={index} />);
