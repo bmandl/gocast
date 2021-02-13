@@ -1,7 +1,6 @@
 @use 'base' as  *;
 
 .subscribe {
-    max-width: calc(1024px + 2 * 70px);
     min-width: 570px;
     max-width: 25%;
     margin: auto;

@@ -1,0 +1,74 @@
+@use "../../styles/base" as *;
+
+.comments-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: -40px;
+}
+
+.form-reply {
+    margin-top: 60px;
+    form {
+        margin-bottom: -20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        & > *{
+            margin-bottom: 20px;
+        }
+        &::after{
+            order: 5;
+            content: '';
+            height: 0;
+            flex-basis: 100%;
+        }
+        &::before{
+            order: 3;
+            content: '';
+            height: 0;
+            flex-basis: 100%;
+        }
+        textarea {
+            border: 1px solid $gray4;
+            border-radius: 3px;
+            flex-basis: 100%;
+            color: $gray4;
+            font-size: 15px;
+            padding: 2em;
+            outline: none;
+            font-family: "Josefin Sans";
+            resize: vertical;
+        }
+        input[type="text"],
+        input[type="email"] {
+            border: 1px solid $gray4;
+            border-radius: 3px;
+            color: $gray4;
+            font-size: 15px;
+            outline: none;
+            font-family: "Josefin Sans";
+            outline: none;
+            padding: 1em 1.5em;
+            flex-basis: calc(50% - 10px);
+            @media(max-width:$xs){
+                flex-basis: 100%;
+            }
+        }
+        input[type="checkbox"] {
+            order: 4;
+        }
+        label {
+            flex: 2;
+            margin-left: 1em;
+            order: 5;
+        }
+
+        input[type="submit"] {
+            order: 6;
+            @media(max-width:$xs){
+                width: 80%;
+                margin:auto;
+            }
+        }
+    }
+}

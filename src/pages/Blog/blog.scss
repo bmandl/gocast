@@ -1,0 +1,18 @@
+@use '../../styles/base' as *;
+@use '../../styles/header';
+@use '../../styles/footer';
+@use '../../styles/subscribe';
+@use '../../styles/logo';
+
+.blog-posts {
+    width: 100%;
+    position: relative;
+    padding-top: 90px;
+    text-align: center;
+
+    .grid-container {
+        max-width: 1170px;
+        margin: auto;
+        text-align: initial;
+    }
+}

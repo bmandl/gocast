@@ -2,20 +2,21 @@
 
 .cta-subscribe {
     @media (max-width: $sm) {
+        margin: auto;
         width: 80%;
         align-self: center;
     }
 
     @media (max-width: $xs) {
-        min-width: initial;
-        max-width: initial;
-        width: calc(100vw - 10px);
+        width: calc(100% - 10px);
         align-self: center;
+        margin: auto;
     }
 
     form {
         display: flex;
         justify-content: center;
+        width: 100%;
 
         @media (max-width: $sm) {
             flex-direction: column;
@@ -33,11 +34,10 @@
             border-radius: 4px 0 0 4px;
         }
 
-        submit {
+        button[type="submit"] {
             flex: 1;
             padding: 1.6em 2.2em;
-            border-top-left-radius: initial;
-            border-bottom-left-radius: initial;
+            border-radius: 0 4px 4px 0;
             @media (max-width: $sm) {
                 border-radius: 4px;
                 margin-top: 10px;

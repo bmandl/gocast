@@ -13,8 +13,8 @@ module.exports = {
         index: './src/pages/Home/Home.js',
         about: './src/pages/About/About.js',
         episodes: './src/pages/Episodes/EpisodesPage.js',
-        //blog: './src/pages/Blog/Blog.js',
-        //post: './src/pages/Posts/Post.js',
+        blog: './src/pages/Blog/Blog.js',
+        post: './src/pages/Posts/Post.js',
         //contact: './src/pages/Contact/Contact.js'
         //index: './src/pages/Home/Home.js',
         //about: './src/pages/About/About.js',
@@ -89,7 +89,7 @@ module.exports = {
             chunks: ['episodes'],
             filename: 'episodes.html',
             title: 'Episodes',
-        }),/*
+        }),
         new HtmlWebpackPlugin({
             template: './src/pages/Blog/blog.html',
             inject: true,
@@ -103,7 +103,7 @@ module.exports = {
             chunks: ['post'],
             filename: 'post.html',
             title: 'Post',
-        }),
+        }),/*
         new HtmlWebpackPlugin({
             template: './src/pages/Contact/contact.html',
             inject: true,

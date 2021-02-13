@@ -20,6 +20,7 @@
         .author {
             font-size: 16px;
             color: $primary;
+            margin-right: 1em;
             &::before {
                 content: "By ";
             }
