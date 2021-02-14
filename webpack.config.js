@@ -109,6 +109,7 @@ module.exports = {
     ],
 
     devServer: {
+        historyApiFallback: true,
         contentBase: path.resolve(__dirname, 'public'),
         hot: true,
         port: 3000,
