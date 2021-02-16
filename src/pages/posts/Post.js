@@ -3,7 +3,7 @@ import {Comments} from "../../components/Comments/Comments";
 
 import "./post.scss";
 
-export const Post = () => {
+export default () => {
     const [comments, getComments] = useState([
         {
             id: 0,

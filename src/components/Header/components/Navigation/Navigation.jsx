@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faPaypal} from '@fortawesome/free-brands-svg-icons';
 
 import "./navigation.scss";
-import { Link } from "react-router-dom";
+import { Link } from "gatsby";
 
 export const Navigation = () => {
     const donate = <FontAwesomeIcon icon={faPaypal} key={0} />;

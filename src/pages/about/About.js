@@ -1,14 +1,15 @@
 import { faPlayCircle } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
+import PageLayout from "../../components/PageLayout/PageLayout";
 import { Slider } from "../../components/Slider/Slider";
 import { Subscribe } from "../../components/Subscribe/Subscribe";
 
 import './about.scss';
 
-export const About = () => {
+export default () => {
     return (
-        <>
+        <PageLayout title="About Me">
             <section class="about">
                 <div class="about-text">
                     <h2>Hello There My Name is Gerry Castin And
@@ -55,6 +56,6 @@ export const About = () => {
             </section>
             <Slider title="Blog Posts" />
             <Subscribe title="New Episode Every Week!" subtitle="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed." />
-        </>
+        </PageLayout>
     )
 }

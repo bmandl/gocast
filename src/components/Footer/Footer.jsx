@@ -7,7 +7,7 @@ import spotify from "./img/spotify.png";
 
 import "./footer.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFacebook, faFacebookF, faInstagram, faLinkedinIn, faSkype } from "@fortawesome/free-brands-svg-icons";
+import { faFacebookF, faInstagram, faLinkedinIn, faSkype } from "@fortawesome/free-brands-svg-icons";
 
 export const Footer = () => {
     return (

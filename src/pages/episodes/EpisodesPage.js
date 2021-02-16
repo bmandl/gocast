@@ -1,7 +1,8 @@
 import React from "react";
 import {Episodes} from "../../components/Episodes/Episodes";
+import PageLayout from "../../components/PageLayout/PageLayout";
 
-export const EpisodesPage = () => {
+export default () => {
 
     const episodes = [
         {
@@ -62,6 +63,8 @@ export const EpisodesPage = () => {
     ]
 
     return (
+        <PageLayout title="Episodes">
         <Episodes title="All Podcast Episodes" episodes={episodes}/>
+        </PageLayout>
     )
 }

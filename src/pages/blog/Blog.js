@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import { CardGrid } from "../../components/CardGrid/CardGrid";
+import PageLayout from "../../components/PageLayout/PageLayout";
 import {Subscribe} from "../../components/Subscribe/Subscribe";
 
 import "./blog.scss";
 
-export const Blog = () => {
+export default () => {
     const [data, getData] = useState(
         [
             {
@@ -70,6 +71,7 @@ export const Blog = () => {
         ]
     )
     return (
+        <PageLayout title="Blog">
         <section class="blog-posts">
             <h2>Blog Posts</h2>
             <div className="grid-container">
@@ -77,5 +79,6 @@ export const Blog = () => {
             </div>
             <Subscribe title="New Episode Every Week!" subtitle="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed." />
         </section>
+        </PageLayout>
     )
 }
