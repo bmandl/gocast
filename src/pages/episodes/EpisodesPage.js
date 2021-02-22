@@ -63,7 +63,7 @@ export default () => {
     ]
 
     return (
-        <PageLayout title="Episodes">
+        <PageLayout title="Episodes" page>
         <Episodes title="All Podcast Episodes" episodes={episodes}/>
         </PageLayout>
     )

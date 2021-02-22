@@ -5,7 +5,7 @@ import {Footer } from "../Footer/Footer";
 export default (props) => {
     return (
         <>
-            <Header title = {props.title} />
+            <Header {...props}/>
             {props.children}
             <Footer />
         </>

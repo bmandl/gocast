@@ -71,7 +71,7 @@ export default () => {
         ]
     )
     return (
-        <PageLayout title="Blog">
+        <PageLayout title="Blog" page>
         <section class="blog-posts">
             <h2>Blog Posts</h2>
             <div className="grid-container">
