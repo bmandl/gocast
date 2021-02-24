@@ -21,7 +21,7 @@ export const Navigation = () => {
             <li className="menu-item"><Link to="/about">About</Link></li>
             <li className="menu-item"><Link to="/episodes">Episodes</Link></li>
             <li className="menu-item"><Link to="/blog">Blog</Link></li>
-            <li className="menu-item"><Link to="/post">Pages</Link></li>
+            <li className="menu-item"><Link to="/">Pages</Link></li>
             <li className="menu-item"><Link to="/contact">Contact</Link></li>
         </ul>
         <div className="cta-top">
