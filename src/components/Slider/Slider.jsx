@@ -1,46 +1,32 @@
 import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React, { useState } from "react";
+import { useStaticQuery, graphql } from "gatsby";
+import React from "react";
 import { Card } from "../Card/Card";
 
 import "./slider.scss";
 
 export const Slider = (props) => {
-    const [cardData, getData] = useState([
-        {
-            id: 0,
-            title: "Global News Podcast Thai soldier kills many people a shooting rampage",
-            text: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore ………..",
-            meta: {
-                author: "Mehedi Hasan",
-                date: "Sep 11, 2020",
-                location: "Cantonese Radio"
+    
+    const cardData = useStaticQuery(graphql`
+    {
+      allMarkdownRemark(limit: 3) {
+        edges {
+          node {
+            excerpt
+            frontmatter {
+              author
+              date
+              location
+              title
             }
-        },
-        {
-            id: 0,
-            title: "News hour - World Health Organization says a new coronavirus cases slowed",
-            text: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore ………..",
-            meta: {
-                author: "Mehedi Hasan",
-                date: "Sep 11, 2020",
-                location: "Cantonese Radio"
-            }
-        },
-        {
-            id: 0,
-            title: "Over to You - Programme face the axe substantial financial cutbacks",
-            text: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore ………..",
-            meta: {
-                author: "Mehedi Hasan",
-                date: "Sep 11, 2020",
-                location: "Cantonese Radio"
-            }
+          }
         }
-    ]);
+      }
+    }
+  `)
 
-    const cards = cardData.map((card, index) => <Card data={card} key={index} />);
-
+    const cards = cardData.allMarkdownRemark.edges.map((card, index) => <Card data={card.node} key={index} />);
     return (
         <div className="slider-container">
             <h2>{props.title}</h2>
