@@ -24,11 +24,8 @@ export const Episodes = (props) => {
       }
     }
   `);
-  console.log(episodesData);
-  
-    const episodes = episodesData.map((episode,index) =>
-        <Episode key={index} {...episode} image={episode.image.publicURL} />
-    )
+
+    const episodes = episodesData.map((episode,index) => <Episode key={index} {...episode} image={episode.image.publicURL} />);
 
     return (        
         episodes.length ? 

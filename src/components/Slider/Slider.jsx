@@ -16,7 +16,7 @@ export const Slider = (props) => {
             excerpt
             frontmatter {
               author
-              date
+              date(formatString: "MMM D, YYYY")
               location
               title
             }

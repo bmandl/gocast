@@ -26,7 +26,7 @@
         "season": 1,
         "date": "2020-09-11",
         "tags": ["audio","goodbyes","life"],
-        "image": "/images/door.png",
+        "image": "./images/door.png",
         "audio": "./audio/what-if-all.mp3"
     }
 ]
