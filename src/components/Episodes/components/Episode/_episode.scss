@@ -66,7 +66,7 @@ $xl: 1599.98px;
         }
     }
 
-    .tags {
+    .meta {
         border-left: 1px solid $tertiary;
         padding: 20px;
         @media (max-width: $md) {
@@ -81,6 +81,9 @@ $xl: 1599.98px;
             font-weight: 400;
             display: block;
             line-height: 2em;
+            &::before{
+                content:'# '
+            }
         }
     }
 }

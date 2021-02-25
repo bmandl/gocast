@@ -27,7 +27,7 @@ export const query = graphql`
       nodes {
         frontmatter {
           author
-          date
+          date(formatString: "MMM D, YYYY")
           location
           title
         }

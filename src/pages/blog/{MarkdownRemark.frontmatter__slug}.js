@@ -56,7 +56,7 @@ export const query = graphql`
     markdownRemark {
       frontmatter {
         author
-        date
+        date(formatString: "MMM D, YYYY")
         title
         location
       }

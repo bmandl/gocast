@@ -20,6 +20,14 @@ module.exports = {
         path: `${__dirname}/blog/`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `episodes`,
+        path: `${__dirname}/episodes/`,
+      },
+    },
+    `gatsby-transformer-json`,
     `gatsby-transformer-remark`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,

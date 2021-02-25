@@ -8,7 +8,7 @@ export const Card = (props) => {
         <div className="post-card">
             <div className="meta-data">
                 <span className="author">{props.data.frontmatter.author}</span>
-                <span className="date">{new Date(props.data.frontmatter.date).toDateString()}</span>
+                <span className="date">{props.data.frontmatter.date}</span>
                 <span className="location">{props.data.frontmatter.location}</span>
             </div>
             <h3>{props.data.frontmatter.title}</h3>

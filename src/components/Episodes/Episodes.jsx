@@ -1,3 +1,4 @@
+import { graphql, useStaticQuery } from "gatsby";
 import React, { useEffect, useState } from "react";
 import { Button } from "../Button/Button";
 import { Episode } from "./components/Episode/Episode";
@@ -5,14 +6,28 @@ import { Episode } from "./components/Episode/Episode";
 import "./episodes.scss";
 
 export const Episodes = (props) => {
-    const [episodesData, getEpisodes] = useState([]);
 
-    useEffect(() => {
-        getEpisodes(props.episodes || []);
-    },[])
-
+    const {allEpisodesJson:{nodes:episodesData}} = useStaticQuery(graphql`
+    {
+      allEpisodesJson {
+        nodes {
+          title
+          audio
+          date(formatString: "MMM D, YYYY")
+          tags
+          text
+          season
+          image {
+            publicURL
+          }
+        }
+      }
+    }
+  `);
+  console.log(episodesData);
+  
     const episodes = episodesData.map((episode,index) =>
-        <Episode key={index} title={episode.title} text={episode.text} tags={episode.tags} img={episode.img} />
+        <Episode key={index} {...episode} image={episode.image.publicURL} />
     )
 
     return (        
