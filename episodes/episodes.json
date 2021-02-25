@@ -28,5 +28,35 @@
         "tags": ["audio","goodbyes","life"],
         "image": "./images/door.png",
         "audio": "./audio/what-if-all.mp3"
+    },
+    {
+        "id": 3,
+        "title": "Visiting my best friend's city for first time",
+        "text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam , sed diam voluptua.",
+        "season": 1,
+        "date": "2020-09-03",
+        "tags": ["audio","goodbeyes","life"],
+        "image": "./images/dog.png",
+        "audio": "./audio/visiting-my-friend.mp3"
+    },
+    {
+        "id": 4,
+        "title": "An interesting read I definitely recommend",
+        "text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam , sed diam voluptua.",
+        "season": 1,
+        "date": "2020-06-29",
+        "tags": ["audio","goodbyes","life"],
+        "image": "./images/book.png",
+        "audio": "./audio/an-interesting-read.mp3"
+    },
+    {
+        "id": 5,
+        "title": "What if all my adventures go back home?",
+        "text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam , sed diam voluptua.",
+        "season": 1,
+        "date": "2020-09-11",
+        "tags": ["audio","goodbyes","life"],
+        "image": "./images/door.png",
+        "audio": "./audio/what-if-all.mp3"
     }
 ]

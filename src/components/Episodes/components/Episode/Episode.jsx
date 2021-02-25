@@ -4,7 +4,6 @@ import {AudioPlayer} from "../../../AudioPlayer/AudioPlayer";
 import "./_episode.scss";
 
 export const Episode = (props) => {
-    console.log(props);
     return (
         <div className="episode">
             <img src={props.image} />
