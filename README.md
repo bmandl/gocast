@@ -1,6 +1,8 @@
 # GoCast - Podcast website 
 Implementation of live podcast website with Gatsby.js from free Adobe XD design template by [themefisher](https://dribbble.com/themefisher)
 
+![Screenshot](screenshot.png)
+
 ## General info
 GoCast is a fictional website for hosting podcasts. Goal of this project was to build working example of converting design file to live website. Project was built for training and learning new technologies.
 
