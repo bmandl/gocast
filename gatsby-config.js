@@ -4,7 +4,7 @@ module.exports = {
     description: `Podcast design template Adobe XD -> HTML + CSS`,
     author: `Blaž Mandl`,
   },
-  pathPrefix: "/gocast",
+  pathPrefix: "/gocast/public",
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
