@@ -16,6 +16,10 @@ To run project, install it localy using npm:
 ```
 $ cd gocast
 $ npm install
-$ gatsby develop
+$ npm run start
 ```
+
+## Project status
+Project is still in development phase. Some parts are not yet functional (like mobile menu, links to blog posts...). It will be announced here, when project is finished.
+
 Live demo: https://gocast.surge.sh
