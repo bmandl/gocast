@@ -25,6 +25,9 @@
                 width: 100%;
                 height: 100%;
                 transition: 0.5s ease;
+                a{
+                    display: none;
+                }
             }
 
             &:hover {
@@ -34,6 +37,7 @@
                 .overlay {
                     opacity: 1;
                     a {
+                        display:initial;
                         text-decoration: none;
                         position: relative;
                         top: calc(50% - 0.5em);
@@ -43,10 +47,8 @@
                         font-size: 3em;
                         font-weight: 900;
                         padding: 0.4em;
-                        &::before {
+                        .link {
                             position: relative;
-                            font-family: "Font Awesome 5 Free";
-                            content: "\f0c1";
                             top: 5px;
                         }
                     }

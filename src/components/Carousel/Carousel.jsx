@@ -1,3 +1,5 @@
+import { faLink } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
 
 import "./carousel.scss";
@@ -23,7 +25,7 @@ export const Carousel = (props) => {
                 {
                     feeds.map((feed, index) =>
                         <div className="feed" key={index}><img src={feed} />
-                            <div className="overlay"><a href=""></a></div>
+                            <div className="overlay"><a href=""><FontAwesomeIcon icon={faLink} className="link" /></a></div>
                         </div>)
                 }
             </div>
