@@ -28,6 +28,12 @@ module.exports = {
         path: `${__dirname}/episodes/`,
       },
     },
+    {
+      resolve: `gatsby-source-instagram`,
+      options: {
+        username: `31770081691`,
+      },
+    },
     `gatsby-transformer-json`,
     `gatsby-transformer-remark`,
     `gatsby-transformer-sharp`,
