@@ -10,7 +10,7 @@ export const Episode = (props) => {
             <div className="episode-content">
                 <h3>{props.title}</h3>
                 <p>{props.text}</p>
-                <AudioPlayer />
+                <AudioPlayer audio={props.audio} />
             </div>
             <div className="meta"><span className="tag">{`Season ${props.season}`}</span><span className="tag">{`Posted on ${props.date}`}</span><span className="tag">{props.tags.join(" / ")}</span></div>
         </div>
