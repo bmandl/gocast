@@ -32,8 +32,8 @@ export const AudioPlayer = (props) => {
             setDuration(getTime(e.target.duration));
         });
         return () => {
-          audioRef.removeEventListener('ended', () => setPlaying(false));
-          audioRef.removeEventListener('timeupdate',()=>{});
+          audioRef.current.removeEventListener('ended', () => setPlaying(false));
+          audioRef.current.removeEventListener('timeupdate',()=>{});
         };
       }, []);
 
