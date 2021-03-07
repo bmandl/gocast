@@ -30,6 +30,7 @@ export const query = graphql`
           date(formatString: "MMM D, YYYY")
           location
           title
+          slug
         }
         excerpt(pruneLength: 200)
       }

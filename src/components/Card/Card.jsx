@@ -1,3 +1,4 @@
+import { Link } from "gatsby";
 import React from "react";
 import { Button } from "../Button/Button";
 
@@ -13,7 +14,11 @@ export const Card = (props) => {
             </div>
             <h3>{props.data.frontmatter.title}</h3>
             <p>{props.data.excerpt}</p>
-            <div className="read-more"><Button style="secondary" text="Read more" /></div>
+            <div className="read-more">
+                <Link to={"/blog/" + props.data.frontmatter.slug} >
+                    <Button style="secondary" text="Read more" />
+                </Link>
+            </div>
         </div>
     )
 }

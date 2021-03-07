@@ -19,6 +19,7 @@ export const Slider = (props) => {
               date(formatString: "MMM D, YYYY")
               location
               title
+              slug
             }
           }
         }
