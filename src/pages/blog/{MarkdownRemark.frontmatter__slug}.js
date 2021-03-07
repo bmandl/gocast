@@ -8,6 +8,8 @@ import PageLayout from "../../components/PageLayout/PageLayout";
 import "./post.scss";
 
 export default function Post({data}) {
+    
+    //This should get comments on front-end with an API
     const [comments, getComments] = useState([
         {
             id: 0,
