@@ -25,7 +25,7 @@ export const Slider = (props) => {
         }
       }
     }
-  `)
+  `) 
 
     const cards = cardData.allMarkdownRemark.edges.map((card, index) => <Card data={card.node} key={index} />);
     return (
