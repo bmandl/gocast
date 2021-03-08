@@ -1,34 +1,74 @@
-import React, { useState,useEffect } from "react";
-import {Comment} from "./components/Comment/Comment";
+import React, { useState, useEffect } from 'react'
 
-import "./comments.scss";
-import { Button } from "../Button/Button";
+import Comment from './components/Comment/Comment'
 
-export const Comments = (props) => {
-    const [comments, getComments] = useState([]);
+import './comments.scss'
+import Button from '../Button/Button'
 
-    useEffect(() => {
-        getComments(props.comments.map((comment,index) => <Comment author={comment.author} text={comment.text} date={comment.date} image={comment.image} key={index} />));
-    },[]);
+const Comments = () => {
+  const [comments, getComments] = useState([
+    {
+      id: 0,
+      author: 'Anthony Lynch',
+      image: '/images/profile.png',
+      date: '15 June 2019',
+      text:
+        'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy sdaa eirmod tempor invidunt ut labore et .',
+    },
+    {
+      id: 1,
+      author: 'Anthony Lynch',
+      image: '/images/profile.png',
+      date: '15 June 2019',
+      text:
+        'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy sdaa eirmod tempor invidunt ut labore et .',
+    },
+    {
+      id: 3,
+      author: 'Anthony Lynch',
+      image: '/images/profile.png',
+      date: '15 June 2019',
+      text:
+        'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy sdaa eirmod tempor invidunt ut labore et .',
+    },
+  ])
 
-    return (
-        <section className="comments">
-            <h3>Comments</h3>
-        <div className="comments-container">
-            {comments.length? comments : "No comments to display"}
-        </div>
+  useEffect(() => {
+    getComments(
+      comments.map(comment => (
+        <Comment
+          author={comment.author}
+          text={comment.text}
+          date={comment.date}
+          image={comment.image}
+          key={comment.id}
+        />
+      ))
+    )
+  }, [])
 
-        <div className="form-reply">            
+  return (
+    <section className="comments">
+      <h3>Comments</h3>
+      <div className="comments-container">
+        {comments.length ? comments : 'No comments to display'}
+      </div>
+
+      <div className="form-reply">
         <h3>Leave a reply</h3>
         <form action="#">
-            <textarea name="reply" id="reply" cols="30" rows="10" placeholder="Your Reply"></textarea>
-            <input type="text" name="name" placeholder="Your Name" />
-            <input type="email" name="email" placeholder="Your Email" />
-            <input type="checkbox" id="save" name="save" /><label htmlFor="save">Save my name, email, and website in this
-                browser for the next time I comment.</label>
-            <Button type="submit" style="primary" text="Post Comment" />
+          <textarea name="reply" id="reply" cols="30" rows="10" placeholder="Your Reply" />
+          <input type="text" name="name" placeholder="Your Name" />
+          <input type="email" name="email" placeholder="Your Email" />
+          <label htmlFor="save">
+            <input type="checkbox" id="save" name="save" />
+            Save my name, email, and website in this browser for the next time I comment.
+          </label>
+          <Button submit styling="primary" text="Post Comment" />
         </form>
-    </div>
+      </div>
     </section>
-    )
+  )
 }
+
+export default Comments
