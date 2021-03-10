@@ -1,18 +1,36 @@
-import React from "react";
-import {AudioPlayer} from "../../../AudioPlayer/AudioPlayer";
+import React from 'react';
+import PropTypes from 'prop-types';
 
-import "./_episode.scss";
+import AudioPlayer from '../../../AudioPlayer/AudioPlayer';
 
-export const Episode = (props) => {
-    return (
-        <div className="episode">
-            <img src={props.image} />
-            <div className="episode-content">
-                <h3>{props.title}</h3>
-                <p>{props.text}</p>
-                <AudioPlayer audio={props.audio} />
-            </div>
-            <div className="meta"><span className="tag">{`Season ${props.season}`}</span><span className="tag">{`Posted on ${props.date}`}</span><span className="tag">{props.tags.join(" / ")}</span></div>
-        </div>
-    )
-}
+import './_episode.scss';
+
+const Episode = ({
+  image, title, text, audio, season, date, tags,
+}) => (
+  <div className="episode">
+    <img alt="Episode" src={image} />
+    <div className="episode-content">
+      <h3>{title}</h3>
+      <p>{text}</p>
+      <AudioPlayer audio={audio} />
+    </div>
+    <div className="meta">
+      <span className="tag">{`Season ${season}`}</span>
+      <span className="tag">{`Posted on ${date}`}</span>
+      <span className="tag">{tags.join(' / ')}</span>
+    </div>
+  </div>
+);
+
+Episode.propTypes = {
+  image: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
+  audio: PropTypes.string.isRequired,
+  season: PropTypes.string.isRequired,
+  date: PropTypes.instanceOf(Date).isRequired,
+  tags: PropTypes.arrayOf(PropTypes.string).isRequired,
+};
+
+export default Episode;

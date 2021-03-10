@@ -1,50 +1,58 @@
 @use '../../styles/base' as *;
 
 .contact {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-top: 40px;
-    font-family: "Josefin Sans";
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 40px;
+  font-family: 'Josefin Sans';
 
-    @media (max-width: $sm) {
-        flex-direction: column;
+  @media (max-width: $sm) {
+    flex-direction: column;
+  }
+
+  label {
+    font-size: 15px;
+    color: $black1;
+  }
+
+  .half {
+    flex-basis: calc(50% - 40px);
+    input {
+      width: 100%;
     }
+  }
 
-    label {
-        font-size: 15px;
-        color: $black1;
-    }
-
-    .half {
-        flex-basis: calc(50% - 40px);
-        input {
-            width: 100%;
-        }
-    }
-
-    input:not([type="submit"]),
+  .whole {
+    flex-basis: 100%;
+    input,
     select,
     textarea {
-        padding-bottom: 1.5em;
-        border: none;
-        border-bottom: 1px solid $tertiary;
-        color: $gray4;
-        font-size: 13px;
-        outline: none;
-        margin-bottom: 2em;
-        margin-top: 1em;
-        flex-basis: 100%;
-        resize: vertical;
+      width: 100%;
     }
+  }
 
-    input[type="submit"] {
-        @media (max-width: $sm) {
-            width: 70%;
-            margin: auto;
-        }
-        @media (max-width: $xs) {
-            width: 100%;
-        }
+  input,
+  select,
+  textarea {
+    padding-bottom: 1.5em;
+    border: none;
+    border-bottom: 1px solid $tertiary;
+    color: $gray4;
+    font-size: 13px;
+    outline: none;
+    margin-bottom: 2em;
+    margin-top: 1em;
+    resize: vertical;
+  }
+
+  button[type='submit'] {
+    @media (max-width: $sm) {
+      width: 70%;
+      margin: auto;
     }
+    @media (max-width: $xs) {
+      width: 100%;
+    }
+  }
 }

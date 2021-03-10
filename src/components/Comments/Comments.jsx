@@ -1,17 +1,17 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react';
 
-import Comment from './components/Comment/Comment'
+import Comment from './components/Comment/Comment';
+import Button from '../Button/Button';
 
-import './comments.scss'
-import Button from '../Button/Button'
+import './comments.scss';
 
 const Comments = () => {
-  const [comments, getComments] = useState([
+  const [comments, setComments] = useState([
     {
       id: 0,
       author: 'Anthony Lynch',
       image: '/images/profile.png',
-      date: '15 June 2019',
+      date: new Date('15 June 2019'),
       text:
         'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy sdaa eirmod tempor invidunt ut labore et .',
     },
@@ -19,7 +19,7 @@ const Comments = () => {
       id: 1,
       author: 'Anthony Lynch',
       image: '/images/profile.png',
-      date: '15 June 2019',
+      date: new Date('15 June 2019'),
       text:
         'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy sdaa eirmod tempor invidunt ut labore et .',
     },
@@ -27,15 +27,15 @@ const Comments = () => {
       id: 3,
       author: 'Anthony Lynch',
       image: '/images/profile.png',
-      date: '15 June 2019',
+      date: new Date('15 June 2019'),
       text:
         'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy sdaa eirmod tempor invidunt ut labore et .',
     },
-  ])
+  ]);
 
   useEffect(() => {
-    getComments(
-      comments.map(comment => (
+    setComments(
+      comments.map((comment) => (
         <Comment
           author={comment.author}
           text={comment.text}
@@ -43,9 +43,9 @@ const Comments = () => {
           image={comment.image}
           key={comment.id}
         />
-      ))
-    )
-  }, [])
+      )),
+    );
+  }, []);
 
   return (
     <section className="comments">
@@ -53,7 +53,6 @@ const Comments = () => {
       <div className="comments-container">
         {comments.length ? comments : 'No comments to display'}
       </div>
-
       <div className="form-reply">
         <h3>Leave a reply</h3>
         <form action="#">
@@ -68,7 +67,7 @@ const Comments = () => {
         </form>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Comments
+export default Comments;

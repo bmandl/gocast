@@ -1,9 +1,9 @@
-import { Link } from 'gatsby'
-import React from 'react'
-import PropTypes from 'prop-types'
-import Button from '../Button/Button'
+import { Link } from 'gatsby';
+import React from 'react';
+import PropTypes from 'prop-types';
+import Button from '../Button/Button';
 
-import './card.scss'
+import './card.scss';
 
 const Card = ({ data }) => (
   <div className="post-card">
@@ -20,7 +20,7 @@ const Card = ({ data }) => (
       </Link>
     </div>
   </div>
-)
+);
 
 Card.propTypes = {
   data: PropTypes.shape({
@@ -33,6 +33,6 @@ Card.propTypes = {
     }).isRequired,
     excerpt: PropTypes.string,
   }).isRequired,
-}
+};
 
-export default Card
+export default Card;

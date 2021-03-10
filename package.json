@@ -55,14 +55,5 @@
     "react-helmet": "^6.1.0",
     "react-swipeable": "^6.1.0",
     "sass": "^1.32.7"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.js": "eslint --cache --fix",
-    "*.{js,jsx,ts,tsx,json,md}": "prettier --write"
   }
 }

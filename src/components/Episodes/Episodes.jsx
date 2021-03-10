@@ -30,14 +30,23 @@ const Episodes = ({ latest, title }) => {
   `);
 
   // Create array of Episode components from list of json data episodes
-  const createEpisodes = (arr) => arr.map((episode) => (
-    <Episode
-      key={episode.id}
-      {...episode}
-      image={episode.image.publicURL}
-      audio={episode.audio.publicURL}
-    />
-  ));
+  const createEpisodes = (arr) => arr.map((episode) => {
+    const {
+      date, tags, text, season, image, audio,
+    } = episode;
+    return (
+      <Episode
+        key={episode.id}
+        title={episode.title}
+        date={date}
+        tags={tags}
+        text={text}
+        season={season}
+        image={image.publicURL}
+        audio={audio.publicURL}
+      />
+    );
+  });
 
   // State for the list with initial first 3 episodes
   const [episodes, setEpisodes] = useState(createEpisodes([...allEpisodes.slice(0, 3)]));

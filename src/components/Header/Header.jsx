@@ -1,16 +1,30 @@
-import React from "react";
-import {Navigation} from "./components/Navigation/Navigation";
-import {Hero} from "./components/Hero/Hero";
-import {Title} from "./components/Title/Title";
+import React from 'react';
+import PropTypes from 'prop-types';
 
-import "./header.scss";
+import Navigation from './components/Navigation/Navigation';
+import Hero from './components/Hero/Hero';
+import Title from './components/Title/Title';
 
-export const Header = (props) => {
-    return (
-    <section className={props.hero ? "header" : props.page ? "header-page" : "no-header"}>
-        <Navigation />
-        {props.hero && <Hero />}
-        {props.title && <Title title={props.title} />}
-    </section>
-    )
-}
+import './header.scss';
+
+const Header = ({ hero, page, title }) => (
+  // eslint-disable-next-line no-nested-ternary
+  <section className={hero ? 'header' : page ? 'header-page' : 'no-header'}>
+    <Navigation />
+    {hero && <Hero />}
+    {title && <Title title={title} />}
+  </section>
+);
+
+Header.propTypes = {
+  hero: PropTypes.bool,
+  page: PropTypes.bool,
+  title: PropTypes.string.isRequired,
+};
+
+Header.defaultProps = {
+  hero: false,
+  page: true,
+};
+
+export default Header;

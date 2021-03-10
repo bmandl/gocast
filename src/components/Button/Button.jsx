@@ -1,9 +1,11 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from 'react';
+import PropTypes from 'prop-types';
 
-import './button.scss'
+import './button.scss';
 
-const Button = ({ submit, styling, customClass, onClick, text }) => (
+const Button = ({
+  submit, styling, customClass, onClick, text,
+}) => (
   <button
     type={submit ? 'submit' : 'button'}
     onClick={onClick}
@@ -11,7 +13,7 @@ const Button = ({ submit, styling, customClass, onClick, text }) => (
   >
     {text}
   </button>
-)
+);
 
 Button.propTypes = {
   submit: PropTypes.bool,
@@ -19,12 +21,12 @@ Button.propTypes = {
   customClass: PropTypes.string,
   onClick: PropTypes.func,
   text: PropTypes.string.isRequired,
-}
+};
 
 Button.defaultProps = {
   submit: false,
   styling: 'primary',
   customClass: '',
   onClick: '',
-}
-export default Button
+};
+export default Button;

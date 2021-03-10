@@ -1,7 +1,7 @@
-import React from 'react'
-import Button from '../Button/Button'
+import React from 'react';
+import Button from '../Button/Button';
 
-import './contact.scss'
+import './contact.scss';
 
 const Contact = () => (
   <form action="" className="contact">
@@ -15,20 +15,24 @@ const Contact = () => (
       <br />
       <input type="text" name="last" placeholder="Your last Name" />
     </label>
-    <label htmlFor="email">
+    <label htmlFor="email" className="whole">
       Your Email Address
+      <br />
       <input type="email" name="email" placeholder="Your Email Address" />
     </label>
-    <label htmlFor="reason">
+
+    <label htmlFor="reason" className="whole">
       Your Reason Of Contact
+      <br />
       <select name="reason" id="reason">
         <option value="Business" defaultValue>
           Business
         </option>
       </select>
     </label>
-    <label htmlFor="message">
+    <label htmlFor="message" className="whole">
       Start Writing From Here
+      <br />
       <textarea
         name="message"
         id="message"
@@ -37,8 +41,9 @@ const Contact = () => (
         placeholder="Lorem Ipsum is simply dummy text of the printing and...……."
       />
     </label>
+
     <Button submit styling="primary" text="Submit" />
   </form>
-)
+);
 
-export default Contact
+export default Contact;
