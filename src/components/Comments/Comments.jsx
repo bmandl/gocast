@@ -34,24 +34,34 @@ const Comments = () => {
   ]);
 
   useEffect(() => {
-    setComments(
-      comments.map((comment) => (
-        <Comment
-          author={comment.author}
-          text={comment.text}
-          date={comment.date}
-          image={comment.image}
-          key={comment.id}
-        />
-      )),
-    );
+    // setComments(
+    //   comments.map((comment) => (
+    //     <Comment
+    //       author={comment.author}
+    //       text={comment.text}
+    //       date={comment.date}
+    //       image={comment.image}
+    //       key={comment.id}
+    //     />
+    //   )),
+    // );
   }, []);
 
+  
   return (
     <section className="comments">
       <h3>Comments</h3>
       <div className="comments-container">
-        {comments.length ? comments : 'No comments to display'}
+        {comments.length ? comments.map((comment,index) => {
+          return(
+            <div className="comment">
+              <img src={comment.image} height="50"/>
+              <span><small>{comment.author}</small></span>
+              <p>{comment.text}</p>
+              <p>{comment.date.toDateString()}</p>
+            </div>
+          )
+        } ) : 'No comments to display'}
       </div>
       <div className="form-reply">
         <h3>Leave a reply</h3>
