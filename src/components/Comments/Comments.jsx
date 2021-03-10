@@ -33,9 +33,9 @@ const Comments = () => {
     },
   ]);
 
-  useEffect(() => {
+  /* useEffect(() => {
     setComments(
-      comments.map((comment) => (
+      Array.from(comments, (comment) => (
         <Comment
           author={comment.author}
           text={comment.text}
@@ -45,13 +45,23 @@ const Comments = () => {
         />
       )),
     );
-  }, []);
+  }, []); */
 
   return (
     <section className="comments">
       <h3>Comments</h3>
       <div className="comments-container">
-        {comments.length ? comments : 'No comments to display'}
+        {comments.length
+          ? Array.from(comments, (comment) => (
+            <Comment
+              author={comment.author}
+              text={comment.text}
+              date={comment.date}
+              image={comment.image}
+              key={comment.id}
+            />
+          ))
+          : 'No comments to display'}
       </div>
       <div className="form-reply">
         <h3>Leave a reply</h3>

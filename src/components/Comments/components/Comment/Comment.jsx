@@ -20,7 +20,7 @@ const Comment = ({
       text={['Reply ', <FontAwesomeIcon icon={faShare} />]}
       customClass="reply"
     />
-    <p className="date">{date}</p>
+    <p className="date">{date.toDateString()}</p>
   </div>
 );
 
